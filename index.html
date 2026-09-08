@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<title>Dead End — Town Survival</title>
+<link rel="stylesheet" href="./css/game.css">
+</head>
+<body>
+<main id="game">
+<canvas id="canvas">
+</canvas>
+<div id="vignette">
+</div>
+<div id="damageFlash">
+</div>
+<div id="hitText">
+</div>
+<div id="danger">
+</div>
+<div id="hud">
+<div class="row">
+<span class="brand">DEAD END</span>
+<span class="small" id="clock">00:00</span>
+<button id="character" style="display:none">CHARACTER</button>
+<button id="pause" aria-label="Pause game">Ⅱ</button>
+</div>
+<div class="row" style="margin-top:10px">
+<span class="small" id="health">100 / 100</span>
+<span class="small" id="level">LEVEL 1 · 0 KILLS</span>
+</div>
+<div class="bar">
+<i id="hp">
+</i>
+</div>
+<div class="bar" id="xp">
+<i>
+</i>
+</div>
+<div id="needs" style="display:none">
+</div>
+<div id="objective">Search the town · 0 / 5 supplies</div>
+</div>
+<div id="toast">
+</div>
+<div id="stick" aria-label="Floating movement joystick">
+<div id="knob">
+</div>
+</div>
+<div id="bottom">
+<div id="combat">
+<strong id="ammo">PISTOL · 8 / 8</strong>
+<br>
+<span id="weapon">AUTO FIRE + MELEE</span>
+<br>
+<span class="small">TOUCH ANYWHERE TO MOVE</span>
+<div id="awareness">UNSEEN</div>
+<span id="dodgeMeter">
+</span>
+<button id="dodge">DODGE</button>
+<button id="sneak" aria-pressed="false">SNEAK · OFF</button>
+</div>
+</div>
+<div id="overlay">
+</div>
+</main>
+<!-- Classic scripts share global bindings. Keep main.js last; do not add async. -->
+<script src="./js/core.js">
+</script>
+<script src="./js/world.js">
+</script>
+<script src="./js/zombies.js">
+</script>
+<script src="./js/combat.js">
+</script>
+<script src="./js/progression.js">
+</script>
+<script src="./js/survival.js">
+</script>
+<script src="./js/equipment.js">
+</script>
+<script src="./js/save.js">
+</script>
+<script src="./js/ui.js">
+</script>
+<script src="./js/rendering.js">
+</script>
+<script src="./js/input.js">
+</script>
+<script src="./js/main.js">
+</script>
+</body>
+</html>
