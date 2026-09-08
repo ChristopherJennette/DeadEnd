@@ -1,6 +1,6 @@
 'use strict';
 // Core. Shared classic-script bindings; startup runs last in main.js.
-const GAME_VERSION = "1.0.0";
+const GAME_VERSION = "1.1.0";
 
 
 const $=s=>document.querySelector(s),canvas=$('#canvas'),ctx=canvas.getContext('2d'),overlay=$('#overlay');

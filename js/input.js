@@ -1,6 +1,10 @@
 'use strict';
 // Input. Shared classic-script bindings; startup runs last in main.js.
-function resetInput(){input={x:0,y:0,id:null,originX:0,originY:0};keys={};$('#knob').style.transform='translate(0px,0px)';$('#stick').style.display='none'}
+$('#door').onclick = interactDoor;
+window.addEventListener('keydown', e => {
+  if (e.key.toLowerCase() === 'e' && !e.repeat) interactDoor();
+});
+function resetInput(){doorAction=null;input={x:0,y:0,id:null,originX:0,originY:0};keys={};$('#knob').style.transform='translate(0px,0px)';$('#stick').style.display='none'}
 const stick=$('#stick'),game=$('#game');
 
 function stickMove(e){if(e.pointerId!==input.id)return;e.preventDefault();let dx=e.clientX-input.originX,dy=e.clientY-input.originY,len=Math.hypot(dx,dy),max=40,f=Math.min(1,max/(len||1));input.x=dx*f/max;input.y=dy*f/max;$('#knob').style.transform='translate('+dx*f+'px,'+dy*f+'px)'}
